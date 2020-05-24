@@ -1,1 +1,1 @@
-
+Baixar o arquivo "Desafio B2W.docx" para maiores informaçoes sobre a aplicação deployada no HEROKU e como acessá-la, bem como as tecnologias utilizadas e orientações sobre como testar e utilizar a API.
