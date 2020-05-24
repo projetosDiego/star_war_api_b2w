@@ -70,7 +70,7 @@ public class StarwarsapiApplicationTests {
 	}
 	
 	@Test
-	public void inserirPlaneta() {
+	public void inserirPlanetaTest() {
 		Planeta planeta = criarInstanciaPlaneta();
 		Mockito.when(repository.findByNomePlanetaContaining("Tatooine")).thenReturn(new ArrayList<Planeta>());
 		
@@ -93,6 +93,10 @@ public class StarwarsapiApplicationTests {
 		Mockito.when(repository.findAll()).thenReturn(CriarListaPlanetas());
 		List<Planeta> listaPlanetasRepo = service.listarPlanetas();
 		Assert.assertNotNull(listaPlanetasRepo);
+		
+		Mockito.when(repository.findAll()).thenReturn(new ArrayList<Planeta>());
+		exception.expect(ObjetoNaoEncontradoException.class);
+		service.listarPlanetas();
 		
 	}
 	

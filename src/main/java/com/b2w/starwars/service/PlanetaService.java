@@ -23,7 +23,12 @@ public class PlanetaService {
     private RestTemplate restTemplate;
 	
 	public List<Planeta> listarPlanetas(){
-		return iPlanetaRepository.findAll(); 
+		List<Planeta> planetas = iPlanetaRepository.findAll(); 
+		if(!planetas.isEmpty()) {
+			return planetas;
+		}else {
+			throw new ObjetoNaoEncontradoException(Constantes.NO_PLANETS);
+		}
 	}
 	
 	public Planeta inserirPlaneta(Planeta planeta) {

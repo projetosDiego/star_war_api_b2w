@@ -7,5 +7,6 @@ public class Constantes {
     public static final String NOT_FOUND_NAME      = "Nome de planeta não encontrado na base.";
     public static final String NOT_FOUND_PLANET    = "Planeta não encontrado na base.";
     public static final String ALREADY_USED_OLANET = "Planeta já cadastrado na base.";
-
+    public static final String NO_PLANETS          = "Nnehum planeta cadastrado.";
+    
 }
